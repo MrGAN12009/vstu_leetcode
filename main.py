@@ -224,8 +224,8 @@ class HttpGetHandler(BaseHTTPRequestHandler):
             )
 
             # Чтение вывода в реальном времени
-            data = {}
             response = ''
+            response += time.time() - start_time + "|"
             for line in process.stdout:
                 response += line.strip()
 
